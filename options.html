@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title id="pageTitle">FreeJumper</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1 id="headerTitle">🚀 FreeJumper</h1>
+      <p class="subtitle" id="headerSubtitle"></p>
+    </header>
+
+    <main>
+      <div class="config-section">
+        <div class="section-header">
+          <h2 id="templatesTitle">URL 跳转模板</h2>
+          <button id="addTemplateBtn" class="btn btn-add"></button>
+        </div>
+        <p class="section-hint" id="templateHint"></p>
+        
+        <div id="templatesList" class="templates-list">
+          <!-- 模板列表将动态生成 -->
+        </div>
+      </div>
+
+      <div class="examples-section">
+        <p class="examples-title" id="quickAddTitle"></p>
+        <div class="example-buttons" id="exampleButtons">
+          <!-- 示例按钮将通过JS动态生成 -->
+        </div>
+      </div>
+
+      <div class="preview-section">
+        <label>
+          <strong id="previewTitle">预览</strong>
+          <span class="hint" id="previewHint"></span>
+        </label>
+        <input 
+          type="text" 
+          id="previewText" 
+          placeholder=""
+          value=""
+        />
+        <div id="previewResults" class="preview-results">
+          <!-- 预览结果将动态生成 -->
+        </div>
+      </div>
+
+      <div class="actions">
+        <button id="saveBtn" class="btn btn-primary"></button>
+        <button id="resetBtn" class="btn btn-secondary"></button>
+      </div>
+
+      <div id="status" class="status"></div>
+    </main>
+  </div>
+
+  <script src="options.js"></script>
+</body>
+</html>

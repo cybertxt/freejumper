@@ -1,0 +1,197 @@
+{
+  "extensionName": {
+    "message": "FreeJumper",
+    "description": "Extension name"
+  },
+  "extensionDescription": {
+    "message": "After selecting text, use it as part of a custom URL and jump to a new tab",
+    "description": "Extension description"
+  },
+  "contextMenuParent": {
+    "message": "🚀 FreeJumper Jump To",
+    "description": "Context menu parent item"
+  },
+  "templateName": {
+    "message": "Template $1",
+    "description": "Template name placeholder",
+    "placeholders": {
+      "1": {
+        "content": "$1",
+        "example": "1"
+      }
+    }
+  },
+  "optionsTitle": {
+    "message": "🚀 FreeJumper Settings",
+    "description": "Options page title"
+  },
+  "optionsSubtitle": {
+    "message": "Configure multiple URL jump templates, select text and choose from right-click menu",
+    "description": "Options page subtitle"
+  },
+  "urlTemplates": {
+    "message": "URL Jump Templates",
+    "description": "URL templates title"
+  },
+  "addTemplate": {
+    "message": "+ Add Template",
+    "description": "Add template button"
+  },
+  "templateHint": {
+    "message": "Each template can have an alias, which will be displayed in the right-click menu",
+    "description": "Template hint"
+  },
+  "templateAlias": {
+    "message": "Alias",
+    "description": "Template alias label"
+  },
+  "templateUrl": {
+    "message": "URL Template",
+    "description": "URL template label"
+  },
+  "required": {
+    "message": "*",
+    "description": "Required marker"
+  },
+  "templatePlaceholder": {
+    "message": "e.g., https://www.google.com/search?q={text}",
+    "description": "URL template placeholder"
+  },
+  "aliasPlaceholder": {
+    "message": "e.g., Google Search",
+    "description": "Alias placeholder"
+  },
+  "deleteTemplate": {
+    "message": "Delete",
+    "description": "Delete template"
+  },
+  "noTemplates": {
+    "message": "No templates yet, click \"Add Template\" to add",
+    "description": "No templates message"
+  },
+  "quickAdd": {
+    "message": "Quick Add Common Templates:",
+    "description": "Quick add title"
+  },
+  "preview": {
+    "message": "Preview",
+    "description": "Preview title"
+  },
+  "previewHint": {
+    "message": "Enter test text to see generated URLs",
+    "description": "Preview hint"
+  },
+  "previewText": {
+    "message": "Enter test text...",
+    "description": "Preview input placeholder"
+  },
+  "previewLabel": {
+    "message": "Generated URL:",
+    "description": "Preview label"
+  },
+  "previewEmpty": {
+    "message": "No templates to preview",
+    "description": "Preview empty"
+  },
+  "saveConfig": {
+    "message": "Save Settings",
+    "description": "Save button"
+  },
+  "resetConfig": {
+    "message": "Reset to Default",
+    "description": "Reset button"
+  },
+  "configSaved": {
+    "message": "Settings saved! Right-click menu will update in a few seconds",
+    "description": "Save success message"
+  },
+  "configReset": {
+    "message": "Reset to default settings",
+    "description": "Reset success message"
+  },
+  "confirmReset": {
+    "message": "Are you sure you want to reset to default settings? This will clear all custom templates",
+    "description": "Reset confirmation"
+  },
+  "errorEmptyUrl": {
+    "message": "Template $1 URL cannot be empty",
+    "description": "Empty URL error",
+    "placeholders": {
+      "1": {
+        "content": "$1",
+        "example": "1"
+      }
+    }
+  },
+  "errorNoPlaceholder": {
+    "message": "Template $1 URL must contain {text} placeholder",
+    "description": "Missing placeholder error",
+    "placeholders": {
+      "1": {
+        "content": "$1",
+        "example": "1"
+      }
+    }
+  },
+  "errorNoTemplates": {
+    "message": "At least one valid template is required",
+    "description": "No templates error"
+  },
+  "errorMinTemplates": {
+    "message": "At least one template must be kept",
+    "description": "Minimum templates error"
+  },
+  "confirmDelete": {
+    "message": "Are you sure you want to delete this template?",
+    "description": "Delete confirmation"
+  },
+  "popupInfo": {
+    "message": "Select text on the webpage, then choose \"FreeJumper Jump To\" from the <strong>right-click menu</strong> to jump to the configured URL.",
+    "description": "Popup info"
+  },
+  "configuredTemplates": {
+    "message": "Configured Templates:",
+    "description": "Configured templates label"
+  },
+  "noConfig": {
+    "message": "No configuration yet, click the button below to add",
+    "description": "No config message"
+  },
+  "openOptions": {
+    "message": "Open Settings Page",
+    "description": "Open options button"
+  },
+  "exampleGoogle": {
+    "message": "Google Search",
+    "description": "Google search example"
+  },
+  "exampleBaidu": {
+    "message": "Baidu Search",
+    "description": "Baidu search example"
+  },
+  "exampleGitHub": {
+    "message": "GitHub Search",
+    "description": "GitHub search example"
+  },
+  "exampleBing": {
+    "message": "Bing Search",
+    "description": "Bing search example"
+  },
+  "exampleTranslate": {
+    "message": "Google Translate",
+    "description": "Google translate example"
+  },
+  "exampleWikipedia": {
+    "message": "Wikipedia",
+    "description": "Wikipedia example"
+  },
+  "defaultGoogle": {
+    "message": "Google Search",
+    "description": "Default Google template name"
+  },
+  "defaultBaidu": {
+    "message": "Baidu Search",
+    "description": "Default Baidu template name"
+  }
+}
+

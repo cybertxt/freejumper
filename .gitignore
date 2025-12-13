@@ -1,0 +1,18 @@
+# Chrome扩展开发
+.DS_Store
+*.log
+
+# 临时文件
+*.tmp
+*.bak
+*.swp
+
+# 编辑器配置
+.vscode/
+.idea/
+*.sublime-*
+
+# 测试文件
+test/
+tests/
+

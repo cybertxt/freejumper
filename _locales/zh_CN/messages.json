@@ -1,0 +1,197 @@
+{
+  "extensionName": {
+    "message": "FreeJumper",
+    "description": "扩展名称"
+  },
+  "extensionDescription": {
+    "message": "选中文字后，将其作为自定义URL的一部分，直接跳转到新标签页",
+    "description": "扩展描述"
+  },
+  "contextMenuParent": {
+    "message": "🚀 FreeJumper 跳转到",
+    "description": "右键菜单父项"
+  },
+  "templateName": {
+    "message": "模板 $1",
+    "description": "模板名称占位符",
+    "placeholders": {
+      "1": {
+        "content": "$1",
+        "example": "1"
+      }
+    }
+  },
+  "optionsTitle": {
+    "message": "🚀 FreeJumper 配置",
+    "description": "配置页面标题"
+  },
+  "optionsSubtitle": {
+    "message": "配置多个URL跳转模板，选中文字后右键菜单选择跳转",
+    "description": "配置页面副标题"
+  },
+  "urlTemplates": {
+    "message": "URL 跳转模板",
+    "description": "URL模板标题"
+  },
+  "addTemplate": {
+    "message": "+ 添加模板",
+    "description": "添加模板按钮"
+  },
+  "templateHint": {
+    "message": "每个模板可以设置别名，选中文字后右键菜单中会显示这些选项",
+    "description": "模板提示"
+  },
+  "templateAlias": {
+    "message": "别名",
+    "description": "模板别名标签"
+  },
+  "templateUrl": {
+    "message": "URL 模板",
+    "description": "URL模板标签"
+  },
+  "required": {
+    "message": "*",
+    "description": "必填标记"
+  },
+  "templatePlaceholder": {
+    "message": "例如: https://www.google.com/search?q={text}",
+    "description": "URL模板占位符"
+  },
+  "aliasPlaceholder": {
+    "message": "例如: Google搜索",
+    "description": "别名占位符"
+  },
+  "deleteTemplate": {
+    "message": "删除",
+    "description": "删除模板"
+  },
+  "noTemplates": {
+    "message": "暂无模板，点击\"添加模板\"按钮添加",
+    "description": "无模板提示"
+  },
+  "quickAdd": {
+    "message": "快速添加常用模板：",
+    "description": "快速添加标题"
+  },
+  "preview": {
+    "message": "预览",
+    "description": "预览标题"
+  },
+  "previewHint": {
+    "message": "输入测试文字查看生成的URL",
+    "description": "预览提示"
+  },
+  "previewText": {
+    "message": "输入测试文字...",
+    "description": "预览输入框占位符"
+  },
+  "previewLabel": {
+    "message": "生成的URL：",
+    "description": "预览标签"
+  },
+  "previewEmpty": {
+    "message": "暂无模板可预览",
+    "description": "预览为空"
+  },
+  "saveConfig": {
+    "message": "保存配置",
+    "description": "保存按钮"
+  },
+  "resetConfig": {
+    "message": "重置为默认",
+    "description": "重置按钮"
+  },
+  "configSaved": {
+    "message": "配置已保存！右键菜单将在几秒内更新",
+    "description": "保存成功消息"
+  },
+  "configReset": {
+    "message": "已重置为默认配置",
+    "description": "重置成功消息"
+  },
+  "confirmReset": {
+    "message": "确定要重置为默认配置吗？这将清除所有自定义模板",
+    "description": "重置确认"
+  },
+  "errorEmptyUrl": {
+    "message": "模板 $1 的URL不能为空",
+    "description": "URL为空错误",
+    "placeholders": {
+      "1": {
+        "content": "$1",
+        "example": "1"
+      }
+    }
+  },
+  "errorNoPlaceholder": {
+    "message": "模板 $1 的URL必须包含 {text} 占位符",
+    "description": "缺少占位符错误",
+    "placeholders": {
+      "1": {
+        "content": "$1",
+        "example": "1"
+      }
+    }
+  },
+  "errorNoTemplates": {
+    "message": "至少需要配置一个有效的模板",
+    "description": "无模板错误"
+  },
+  "errorMinTemplates": {
+    "message": "至少需要保留一个模板",
+    "description": "最少模板数错误"
+  },
+  "confirmDelete": {
+    "message": "确定要删除这个模板吗？",
+    "description": "删除确认"
+  },
+  "popupInfo": {
+    "message": "选中网页上的文字，<strong>右键菜单</strong>中选择\"FreeJumper 跳转到\"即可跳转到配置的URL。",
+    "description": "弹出窗口说明"
+  },
+  "configuredTemplates": {
+    "message": "已配置的模板：",
+    "description": "已配置模板标签"
+  },
+  "noConfig": {
+    "message": "暂无配置，点击下方按钮添加",
+    "description": "无配置提示"
+  },
+  "openOptions": {
+    "message": "打开配置页面",
+    "description": "打开配置页面按钮"
+  },
+  "exampleGoogle": {
+    "message": "Google 搜索",
+    "description": "Google搜索示例"
+  },
+  "exampleBaidu": {
+    "message": "百度搜索",
+    "description": "百度搜索示例"
+  },
+  "exampleGitHub": {
+    "message": "GitHub 搜索",
+    "description": "GitHub搜索示例"
+  },
+  "exampleBing": {
+    "message": "Bing 搜索",
+    "description": "Bing搜索示例"
+  },
+  "exampleTranslate": {
+    "message": "Google 翻译",
+    "description": "Google翻译示例"
+  },
+  "exampleWikipedia": {
+    "message": "Wikipedia",
+    "description": "Wikipedia示例"
+  },
+  "defaultGoogle": {
+    "message": "Google搜索",
+    "description": "默认Google模板名称"
+  },
+  "defaultBaidu": {
+    "message": "百度搜索",
+    "description": "默认百度模板名称"
+  }
+}
+
