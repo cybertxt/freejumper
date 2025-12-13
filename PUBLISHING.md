@@ -127,7 +127,7 @@ freejumper/
 
 ```bash
 # 进入项目目录
-cd /Users/tomasxie/projects/freejumper
+cd freejumper
 
 # 创建发布包（排除不需要的文件）
 zip -r freejumper-v1.1.0.zip . \
