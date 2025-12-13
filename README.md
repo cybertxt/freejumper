@@ -129,6 +129,10 @@ freejumper/
 - 模板别名可以为空，如果为空将显示为"模板 N"（N为序号）
 - 保存配置后，右键菜单会在几秒内自动更新
 
+## 发布到 Chrome Web Store
+
+如果你想将扩展发布到 Chrome Web Store，请查看 [发布指南](PUBLISHING.md)。
+
 ## 许可证
 
 MIT License

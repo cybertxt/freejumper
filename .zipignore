@@ -1,0 +1,44 @@
+# Chrome Web Store 发布时忽略的文件
+
+# Git 相关
+.git/
+.gitignore
+.gitattributes
+
+# 文档文件（可选，Chrome Web Store 不需要）
+README.md
+PUBLISHING.md
+*.md
+
+# 开发工具
+.DS_Store
+.vscode/
+.idea/
+*.sublime-*
+
+# 图标生成工具（不需要发布）
+icons/generate-icons.html
+icons/README.md
+
+# 测试文件
+test/
+tests/
+*.test.js
+*.spec.js
+
+# 构建工具
+node_modules/
+package.json
+package-lock.json
+yarn.lock
+
+# 临时文件
+*.log
+*.tmp
+*.bak
+*.swp
+*~
+
+# 源代码映射（可选）
+*.map
+
