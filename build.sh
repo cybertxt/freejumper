@@ -67,4 +67,3 @@ echo "2. 在开发者模式下测试扩展"
 echo "3. 上传到 Chrome Web Store 开发者控制台"
 echo ""
 echo "上传地址: https://chrome.google.com/webstore/devconsole"
-
