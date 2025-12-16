@@ -1,6 +1,8 @@
-# FreeJumper Chrome 扩展
+# FreeJumper Chrome/Edge 扩展
 
-一个强大的Chrome扩展，允许你选中网页上的文字后，将其作为自定义URL的一部分，直接在新标签页中打开。
+一个强大的Chrome/Edge扩展，允许你选中网页上的文字后，将其作为自定义URL的一部分，直接在新标签页中打开。
+
+Edge Addons: https://microsoftedge.microsoft.com/addons/detail/freejumper/fpepakpipfjekmjfpoampbeihfnacpgl
 
 ## 功能特点
 
