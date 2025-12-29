@@ -192,6 +192,18 @@
   "defaultBaidu": {
     "message": "百度搜索",
     "description": "默认百度模板名称"
+  },
+  "moveUp": {
+    "message": "上移",
+    "description": "上移按钮"
+  },
+  "moveDown": {
+    "message": "下移",
+    "description": "下移按钮"
+  },
+  "dragHandle": {
+    "message": "拖拽排序",
+    "description": "拖拽手柄提示"
   }
 }
 

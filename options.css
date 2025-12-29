@@ -77,6 +77,7 @@ main {
   padding: 15px;
   background: #fafafa;
   transition: all 0.2s;
+  cursor: default;
 }
 
 .template-item:hover {
@@ -84,11 +85,53 @@ main {
   background: #fff;
 }
 
+.template-item[draggable="true"] {
+  cursor: move;
+}
+
+.template-item.dragging {
+  opacity: 0.5;
+  border-color: #667eea;
+  transform: scale(0.98);
+}
+
 .template-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 12px;
+}
+
+.template-controls-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.template-controls-right {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.drag-handle {
+  cursor: move;
+  color: #999;
+  font-size: 18px;
+  user-select: none;
+  padding: 2px 4px;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+.drag-handle:hover {
+  color: #667eea;
+  background: #f0f0f0;
+}
+
+.template-item.drag-over {
+  border-color: #667eea;
+  background: #f0f4ff;
 }
 
 .template-number {
@@ -153,15 +196,38 @@ main {
   background: none;
   border: none;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 14px;
   padding: 4px 8px;
   border-radius: 4px;
   transition: all 0.2s;
+  color: #666;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 28px;
+  height: 28px;
 }
 
-.btn-icon:hover {
-  background: #fee;
+.btn-icon:hover:not(:disabled) {
+  background: #f0f0f0;
+  color: #667eea;
   transform: scale(1.1);
+}
+
+.btn-icon:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.btn-move-up,
+.btn-move-down {
+  font-size: 12px;
+  line-height: 1;
+}
+
+.btn-delete:hover {
+  background: #fee;
+  color: #e74c3c;
 }
 
 .empty-state {

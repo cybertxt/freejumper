@@ -192,6 +192,18 @@
   "defaultBaidu": {
     "message": "Baidu Search",
     "description": "Default Baidu template name"
+  },
+  "moveUp": {
+    "message": "Move Up",
+    "description": "Move up button"
+  },
+  "moveDown": {
+    "message": "Move Down",
+    "description": "Move down button"
+  },
+  "dragHandle": {
+    "message": "Drag to reorder",
+    "description": "Drag handle tooltip"
   }
 }
 

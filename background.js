@@ -43,7 +43,12 @@ function createContextMenus(templates) {
     const templatesToUse = pendingUpdate || templates;
     pendingUpdate = null;
     
-    if (templatesToUse && templatesToUse.length > 0) {
+    // 过滤出有效的模板（有URL且包含{text}），保持顺序
+    const validTemplates = (templatesToUse || []).filter(t => 
+      t && t.url && t.url.trim() && t.url.includes('{text}')
+    );
+    
+    if (validTemplates && validTemplates.length > 0) {
       // 创建父菜单
       chrome.contextMenus.create({
         id: 'freejumper-parent',
@@ -64,9 +69,9 @@ function createContextMenus(templates) {
           }
         }
         
-        // 为每个模板创建子菜单项
+        // 为每个模板创建子菜单项（按数组顺序）
         let createdCount = 0;
-        templatesToUse.forEach((template, index) => {
+        validTemplates.forEach((template, index) => {
           const defaultName = chrome.i18n.getMessage('templateName', [String(index + 1)]);
           chrome.contextMenus.create({
             id: `freejumper-${template.id}`,
@@ -86,7 +91,7 @@ function createContextMenus(templates) {
             
             createdCount++;
             // 所有菜单项创建完成后，重置标志
-            if (createdCount === templatesToUse.length) {
+            if (createdCount === validTemplates.length) {
               isUpdatingMenus = false;
               // 如果有待处理的更新，立即处理
               if (pendingUpdate) {
