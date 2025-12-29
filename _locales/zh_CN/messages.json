@@ -204,6 +204,38 @@
   "dragHandle": {
     "message": "拖拽排序",
     "description": "拖拽手柄提示"
+  },
+  "exportConfig": {
+    "message": "导出配置",
+    "description": "导出配置按钮"
+  },
+  "importConfig": {
+    "message": "导入配置",
+    "description": "导入配置按钮"
+  },
+  "exportSuccess": {
+    "message": "配置已导出",
+    "description": "导出成功消息"
+  },
+  "importSuccess": {
+    "message": "配置已导入！",
+    "description": "导入成功消息"
+  },
+  "importError": {
+    "message": "导入失败：文件格式不正确",
+    "description": "导入错误消息"
+  },
+  "importEmpty": {
+    "message": "导入失败：配置文件为空或格式错误",
+    "description": "导入空文件错误"
+  },
+  "importConfirm": {
+    "message": "导入配置将覆盖当前所有模板，确定要继续吗？",
+    "description": "导入确认消息"
+  },
+  "selectFile": {
+    "message": "选择配置文件",
+    "description": "选择文件提示"
   }
 }
 

@@ -26,6 +26,9 @@ function initializeI18n() {
   document.getElementById('previewText').value = isZh ? '示例文字' : 'Example text';
   document.getElementById('saveBtn').textContent = chrome.i18n.getMessage('saveConfig');
   document.getElementById('resetBtn').textContent = chrome.i18n.getMessage('resetConfig');
+  document.getElementById('importExportTitle').textContent = isZh ? '配置管理' : 'Settings Management';
+  document.getElementById('exportBtn').textContent = chrome.i18n.getMessage('exportConfig');
+  document.getElementById('importBtn').textContent = chrome.i18n.getMessage('importConfig');
   
   // 创建示例按钮
   const exampleButtons = [
@@ -83,6 +86,17 @@ function setupEventListeners() {
   
   // 预览文字输入框变化时更新预览
   document.getElementById('previewText').addEventListener('input', updatePreview);
+  
+  // 导出按钮
+  document.getElementById('exportBtn').addEventListener('click', exportConfig);
+  
+  // 导入按钮
+  document.getElementById('importBtn').addEventListener('click', () => {
+    document.getElementById('importFileInput').click();
+  });
+  
+  // 文件选择事件
+  document.getElementById('importFileInput').addEventListener('change', handleFileImport);
   
   // 示例按钮（动态绑定）
   document.addEventListener('click', (e) => {
@@ -539,4 +553,110 @@ function escapeHtml(text) {
   const div = document.createElement('div');
   div.textContent = text;
   return div.innerHTML;
+}
+
+// 导出配置
+function exportConfig() {
+  const config = {
+    version: '1.0',
+    exportDate: new Date().toISOString(),
+    templates: templates
+  };
+  
+  const jsonStr = JSON.stringify(config, null, 2);
+  const blob = new Blob([jsonStr], { type: 'application/json' });
+  const url = URL.createObjectURL(blob);
+  
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = `freejumper-config-${new Date().toISOString().split('T')[0]}.json`;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+  
+  showStatus(chrome.i18n.getMessage('exportSuccess'), 'success');
+  setTimeout(() => {
+    hideStatus();
+  }, 2000);
+}
+
+// 处理文件导入
+function handleFileImport(e) {
+  const file = e.target.files[0];
+  if (!file) {
+    return;
+  }
+  
+  const reader = new FileReader();
+  reader.onload = (event) => {
+    try {
+      const content = event.target.result;
+      const config = JSON.parse(content);
+      
+      // 验证配置格式
+      if (!config || !config.templates || !Array.isArray(config.templates)) {
+        showStatus(chrome.i18n.getMessage('importError'), 'error');
+        return;
+      }
+      
+      if (config.templates.length === 0) {
+        showStatus(chrome.i18n.getMessage('importEmpty'), 'error');
+        return;
+      }
+      
+      // 验证每个模板的基本结构
+      const validTemplates = config.templates.filter(t => 
+        t && typeof t === 'object' && t.id
+      );
+      
+      if (validTemplates.length === 0) {
+        showStatus(chrome.i18n.getMessage('importEmpty'), 'error');
+        return;
+      }
+      
+      // 确认导入
+      if (confirm(chrome.i18n.getMessage('importConfirm'))) {
+        // 导入配置
+        templates = validTemplates.map(t => ({
+          id: t.id || String(Date.now() + Math.random()),
+          name: t.name || '',
+          url: t.url || ''
+        }));
+        
+        // 更新 nextId
+        nextId = Math.max(...templates.map(t => parseInt(t.id) || 0)) + 1;
+        
+        // 保存到存储
+        chrome.storage.sync.set({ urlTemplates: templates }, () => {
+          if (chrome.runtime.lastError) {
+            const isZh = chrome.i18n.getUILanguage().toLowerCase().startsWith('zh');
+            const errorMsg = isZh ? '导入失败: ' : 'Import failed: ';
+            showStatus(errorMsg + chrome.runtime.lastError.message, 'error');
+          } else {
+            // 重新渲染
+            renderTemplates();
+            updatePreview();
+            showStatus(chrome.i18n.getMessage('importSuccess'), 'success');
+            setTimeout(() => {
+              hideStatus();
+            }, 3000);
+          }
+        });
+      }
+    } catch (error) {
+      console.error('导入配置错误:', error);
+      showStatus(chrome.i18n.getMessage('importError'), 'error');
+    }
+    
+    // 清空文件输入，允许重复导入同一文件
+    e.target.value = '';
+  };
+  
+  reader.onerror = () => {
+    showStatus(chrome.i18n.getMessage('importError'), 'error');
+    e.target.value = '';
+  };
+  
+  reader.readAsText(file);
 }

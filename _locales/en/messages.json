@@ -204,6 +204,38 @@
   "dragHandle": {
     "message": "Drag to reorder",
     "description": "Drag handle tooltip"
+  },
+  "exportConfig": {
+    "message": "Export Settings",
+    "description": "Export config button"
+  },
+  "importConfig": {
+    "message": "Import Settings",
+    "description": "Import config button"
+  },
+  "exportSuccess": {
+    "message": "Settings exported",
+    "description": "Export success message"
+  },
+  "importSuccess": {
+    "message": "Settings imported!",
+    "description": "Import success message"
+  },
+  "importError": {
+    "message": "Import failed: Invalid file format",
+    "description": "Import error message"
+  },
+  "importEmpty": {
+    "message": "Import failed: File is empty or invalid format",
+    "description": "Import empty file error"
+  },
+  "importConfirm": {
+    "message": "Importing settings will overwrite all current templates. Are you sure?",
+    "description": "Import confirmation message"
+  },
+  "selectFile": {
+    "message": "Select config file",
+    "description": "Select file prompt"
   }
 }
 
