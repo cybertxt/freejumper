@@ -1,6 +1,6 @@
 # FreeJumper Privacy Policy
 
-**Last Updated:** 2024
+**Last Updated:** 2025
 
 ## Overview
 
