@@ -186,7 +186,6 @@ zip -r freejumper-v1.1.0.zip . \
 - **权限说明**：解释为什么需要这些权限
   - `storage`：存储用户配置
   - `activeTab`：访问当前标签页以获取选中文字
-  - `tabs`：在新标签页中打开URL
   - `contextMenus`：创建右键菜单
   - `<all_urls>`：在所有网页上工作
 

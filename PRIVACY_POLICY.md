@@ -45,7 +45,6 @@ FreeJumper（"本扩展"）是一个 Chrome 浏览器扩展，允许用户选中
 
 - **`storage`**：存储您的URL模板配置
 - **`activeTab`**：访问当前标签页以获取您选中的文字
-- **`tabs`**：在新标签页中打开URL
 - **`contextMenus`**：创建右键菜单选项
 - **`<all_urls>`**：使扩展在所有网页上可用
 

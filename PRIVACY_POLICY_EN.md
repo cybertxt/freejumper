@@ -45,7 +45,6 @@ This extension requests the following permissions, used solely to provide core f
 
 - **`storage`**: Store your URL template configurations
 - **`activeTab`**: Access the current tab to retrieve selected text
-- **`tabs`**: Open URLs in new tabs
 - **`contextMenus`**: Create right-click menu options
 - **`<all_urls>`**: Enable the extension to work on all web pages
 
